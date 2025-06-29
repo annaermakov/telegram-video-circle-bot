@@ -1,11 +1,8 @@
 [phases.setup]
-nixPkgs = ['python310', 'ffmpeg', 'opencv4']
+nixPkgs = ['python311', 'ffmpeg']
 
 [phases.install]
-cmds = ['pip install -r requirements.txt']
-
-[phases.build]
-cmds = ['echo "Build completed"']
+cmds = ['pip install --no-cache-dir -r requirements.txt']
 
 [start]
 cmd = 'python bot.py'
